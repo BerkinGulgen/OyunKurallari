@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.21cdfd94.css",
-    "main.js": "/test/static/js/main.7e21ba4c.js",
-    "static/js/453.85ccb8b6.chunk.js": "/test/static/js/453.85ccb8b6.chunk.js",
-    "index.html": "/test/index.html",
-    "main.21cdfd94.css.map": "/test/static/css/main.21cdfd94.css.map",
-    "main.7e21ba4c.js.map": "/test/static/js/main.7e21ba4c.js.map",
-    "453.85ccb8b6.chunk.js.map": "/test/static/js/453.85ccb8b6.chunk.js.map"
+    "main.css": "/OyunKurallari/static/css/main.21cdfd94.css",
+    "main.js": "/OyunKurallari/static/js/main.f10a70c9.js",
+    "static/js/453.85ccb8b6.chunk.js": "/OyunKurallari/static/js/453.85ccb8b6.chunk.js",
+    "index.html": "/OyunKurallari/index.html",
+    "main.21cdfd94.css.map": "/OyunKurallari/static/css/main.21cdfd94.css.map",
+    "main.f10a70c9.js.map": "/OyunKurallari/static/js/main.f10a70c9.js.map",
+    "453.85ccb8b6.chunk.js.map": "/OyunKurallari/static/js/453.85ccb8b6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21cdfd94.css",
-    "static/js/main.7e21ba4c.js"
+    "static/js/main.f10a70c9.js"
   ]
 }
