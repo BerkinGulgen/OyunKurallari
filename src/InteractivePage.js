@@ -1,57 +1,57 @@
 import React, { useState } from "react";
+import "./InteractivePage.css";  // CSS dosyasını da dahil ediyoruz
 
-const figures = [
-  { id: 1, title: "Figür 1", description: "Bu figür oyunun başlangıcını temsil eder." },
-  { id: 2, title: "Figür 2", description: "Bu figür oyuncunun ilerlemesini gösterir." },
-  { id: 3, title: "Figür 3", description: "Bu figür düşmanla karşılaşmayı temsil eder." },
-  { id: 4, title: "Figür 4", description: "Bu figür özel bir eşyayı temsil eder." },
-  { id: 5, title: "Figür 5", description: "Bu figür tehlikeyi işaret eder." },
-  { id: 6, title: "Figür 6", description: "Bu figür oyunun sonuna yaklaşmayı simgeler." },
+// Fotoğraf üzerindeki binaları temsil eden tıklanabilir alanlar
+const buildings = [
+  { id: 1, name: "Bina 1", description: "Bina 1 hakkında bilgi burada." , x: 30, y: 50 },
+  { id: 2, name: "Bina 2", description: "Bina 2 hakkında bilgi burada." , x: 60, y: 30 },
+  { id: 3, name: "Bina 3", description: "Bina 3 hakkında bilgi burada." , x: 45, y: 70 },
+  { id: 4, name: "Bina 4", description: "Bina 4 hakkında bilgi burada." , x: 80, y: 85 },
 ];
 
 export default function InteractivePage() {
-  const [openFigure, setOpenFigure] = useState(null);
+  const [activeBuilding, setActiveBuilding] = useState(null);
 
-  const handleClick = (id) => {
-    setOpenFigure(openFigure === id ? null : id);
+  const handleBuildingClick = (building) => {
+    setActiveBuilding(activeBuilding === building.id ? null : building.id);
   };
 
   return (
-    <div style={{ fontFamily: "sans-serif", maxWidth: "800px", margin: "auto", padding: "2rem" }}>
-      <h1 style={{ textAlign: "center" }}>Oyun Figürleri</h1>
-      <p style={{ textAlign: "center", marginBottom: "2rem" }}>
-        Bir figüre tıklayarak ne anlama geldiğini öğrenebilirsiniz.
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: "1rem" }}>
-        {figures.map((fig) => (
-          <div key={fig.id}>
-            <button
-              onClick={() => handleClick(fig.id)}
-              style={{
-                width: "100%",
-                padding: "1rem",
-                background: "#f0f0f0",
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                cursor: "pointer",
-              }}
-            >
-              {fig.title}
-            </button>
-            {openFigure === fig.id && (
-              <div
-                style={{
-                  marginTop: "0.5rem",
-                  background: "#fff8dc",
-                  padding: "0.5rem",
-                  borderRadius: "4px",
-                }}
-              >
-                {fig.description}
-              </div>
-            )}
-          </div>
+    <div className="container">
+      <h1>Fotoğraf Üzerindeki Binalar</h1>
+      <div className="image-container">
+        <img src="/buildings.jpg" alt="Binalar" className="building-image" />
+
+        {buildings.map((building) => (
+          <div
+            key={building.id}
+            className="clickable-area"
+            style={{
+              left: `${building.x}%`,
+              top: `${building.y}%`,
+              position: "absolute",
+              cursor: "pointer",
+              width: "20px",  // Alan boyutu
+              height: "20px",
+              backgroundColor: "red",
+              borderRadius: "50%",
+            }}
+            onClick={() => handleBuildingClick(building)}
+          ></div>
         ))}
+
+        {activeBuilding && (
+          <div className="info-bubble">
+            {buildings
+              .filter((building) => building.id === activeBuilding)
+              .map((building) => (
+                <div key={building.id}>
+                  <h3>{building.name}</h3>
+                  <p>{building.description}</p>
+                </div>
+              ))}
+          </div>
+        )}
       </div>
     </div>
   );
