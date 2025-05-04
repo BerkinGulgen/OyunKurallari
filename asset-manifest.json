@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/OyunKurallari/static/css/main.21cdfd94.css",
-    "main.js": "/OyunKurallari/static/js/main.f10a70c9.js",
+    "main.css": "/OyunKurallari/static/css/main.e6c13ad2.css",
+    "main.js": "/OyunKurallari/static/js/main.71976586.js",
     "static/js/453.85ccb8b6.chunk.js": "/OyunKurallari/static/js/453.85ccb8b6.chunk.js",
     "index.html": "/OyunKurallari/index.html",
-    "main.21cdfd94.css.map": "/OyunKurallari/static/css/main.21cdfd94.css.map",
-    "main.f10a70c9.js.map": "/OyunKurallari/static/js/main.f10a70c9.js.map",
+    "main.e6c13ad2.css.map": "/OyunKurallari/static/css/main.e6c13ad2.css.map",
+    "main.71976586.js.map": "/OyunKurallari/static/js/main.71976586.js.map",
     "453.85ccb8b6.chunk.js.map": "/OyunKurallari/static/js/453.85ccb8b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21cdfd94.css",
-    "static/js/main.f10a70c9.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.71976586.js"
   ]
 }
